@@ -1,5 +1,4 @@
 // js to access html elements
-// eslint-disable-next-line max-classes-per-file
 const container = document.querySelector('.books-container');
 const form = document.querySelector('.add-book-container');
 const bookTitle = document.querySelector('.title');
