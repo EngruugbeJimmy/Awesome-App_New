@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable no-unused-vars */
 
 // import DateTime object from luxon.js
 import { DateTime } from './modules/luxon.js';
