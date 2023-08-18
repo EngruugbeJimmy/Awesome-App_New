@@ -1,5 +1,3 @@
-
-// import DateTime object from luxon.js
 import { DateTime } from './modules/luxon.js';
 
 import { Book } from './modules/book.js';
