@@ -1,5 +1,5 @@
 import { DateTime } from './modules/luxon';
-import { Book } from './modules/book';
+import Book from './modules/book';
 import {
   container,
   form,
