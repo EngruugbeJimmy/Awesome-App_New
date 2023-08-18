@@ -1,7 +1,5 @@
-import { DateTime } from './modules/luxon.js';
-
-import { Book } from './modules/book.js';
-
+import { DateTime } from './modules/luxon';
+import { Book } from './modules/book';
 import {
   container,
   form,
@@ -14,7 +12,7 @@ import {
   addNew,
   contact,
   pageTitle,
-} from './modules/access-html-elements.js';
+} from './modules/access-html-elements';
 
 // creating book object from class Book
 class features {
@@ -29,7 +27,7 @@ class features {
       localStorage.setItem('awesome-books', '[]');
     }
 
-    // geting old data and merging with new data
+    // getting old data and merging with new data
     const oldData = JSON.parse(localStorage.getItem('awesome-books'));
     oldData.push(book);
 
@@ -49,12 +47,7 @@ class features {
     const books = JSON.parse(localStorage.getItem('awesome-books'));
     for (let i = 0; i < books.length; i += 1) {
       const div = document.createElement('div');
-      div.className = 'book-container';
-      if (i % 2 !== 0) {
-        div.className = 'white-color';
-      } else {
-        div.className = 'gray-color';
-      }
+      div.className = i % 2 !== 0 ? 'white-color' : 'gray-color';
 
       const textDiv = document.createElement('div');
       textDiv.className = 'text-container';
@@ -88,8 +81,8 @@ class features {
   };
 }
 
-// js to add event to aadBook and prevent default
-const addNewBook = form.addEventListener('click', (event) => {
+// js to add event to addBook and prevent default
+form.addEventListener('click', (event) => {
   if (bookTitle.value == null || bookAuthor.value == null) {
     event.preventDefault();
   } else {
@@ -98,10 +91,7 @@ const addNewBook = form.addEventListener('click', (event) => {
 });
 
 // js to invoke displayBooks function
-const displayAllBooks = window.addEventListener(
-  'DOMContentLoaded',
-  features.displayBooks,
-);
+window.addEventListener('DOMContentLoaded', features.displayBooks);
 
 // js to display time
 const dateTime = DateTime.now();
