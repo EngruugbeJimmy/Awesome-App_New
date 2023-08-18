@@ -34,15 +34,15 @@ body {
 .list-text {
   color: rgb(70, 70, 253);
 }
-/
+
 .add-book-container {
-      padding: 10px; /* Add spacing around the input fields and button */
-    }
+  padding: 10px; /* Add spacing around the input fields and button */
+}
 
 .add-book-container input,
 .add-book-container button {
-      margin-bottom: 10px; /* Add spacing between input fields and button */
-    }
+  margin-bottom: 10px; /* Add spacing between input fields and button */
+}
 
 .add-new-text {
   width: 50%;
